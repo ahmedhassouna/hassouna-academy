@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="myscrolll.css" />
+    <title>Hassouna Academy</title>
+<style></style>
+<script>
+  
+
+  function loadIframe() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            const iframe = document.getElementById("dynamicIframe");
+
+            if (page === 'mynotesha1') {iframe.src = "mynotesha1.html";} 
+            else if (page === 'mynotesha1en') {iframe.src = "mynotesha1en.html";} 
+            else if (page === 'myexpensesha1') {iframe.src = "myexpensesha1.html";} 
+            else if (page === 'myexpensesha1en') {iframe.src = "myexpensesha1en.html";} 
+            // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
+            else {iframe.src = "home.html"; }
+        }
+    
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  <a target="formain" href="home.html">🏠 الرئيسية</a>
+
+  <div class="dropdown">
+    <a class="dropdown-menu" href="#">🎗️ انضمام</a>
+    <div id="drop-menu1" class="dropdown-content">
+        <a target="_blank" href="https://www.youtube.com/channel/UC5PbBz_roYczmUR6gg_OAxw/join">انضمام الي القناة</a>
+        <a target="formain" href="ahmedwords.html">كلمة احمد حسونة</a>
+        <a target="formain" href="links.html">روابط الاكاديمية</a>
+        <a target="formain" href="about.html">من نحن</a>
+        <a target="_blank" href="https://www.paypal.com/paypalme/HassounaAcademy">حساب باي بال للدعم</a>
+        <a target="formain" href="register.html">بديل انشاء الحساب</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#">🎓 كورسات</a>
+    <div id="drop-menu2" class="dropdown-content">
+        <a target="formain" href="all.html">جميع الكورسات مرتبة</a>
+        <a target="formain" href="plcourses.html">كورسات لغات البرمجة</a>
+        <a target="formain" href="mobilecourses.html">كورسات تطبيقات الهاتف</a>
+        <a target="formain" href="webcourses.html">كورسات الويب</a>
+        <a target="formain" href="dbanalysiscourses.html">كورسات تحليل و قواعد البيانات</a>
+        <a target="formain" href="comoscourses.html">كورسات كمبيوتر ونظم تشغيل</a>
+        <a target="formain" href="educourses.html">كورسات مناهج دراسية</a>
+        <a target="formain" href="programsstory.html">برامج و قصص</a>
+        <a target="formain" href="appsbooks.html">تطبيقات و كتب</a>
+        
+    </div>
+  </div>
+
+  <a target="formain" href="howtolearn.html">🧮 مسارات</a>
+  <img id="img-logo" src="images/logo.png" alt="">
+  <a id="link-logo" href="https://www.youtube.com/user/HassounaAcademy" target="_blank">
+    <span id="txt1">Hassouna Academy</span>
+    <span id="txt2">HA</span>
+  </a>
+</div>
+
+<div class="main" id="divMain" style="height: 100%;">
+  <iframe id="dynamicIframe" onload="resizeIframe();" name="formain" src="home.html" frameborder="0"></iframe>
+
+  <footer>
+    <div class="footer-content">
+        <p>&copy; <span id="year">2024</span> حسونة أكاديمي. جميع الحقوق محفوظة.</p>
+        <ul class="socials">
+          <li><a target="_blank" href="#" id="youtube"><img src="images/youtube.png" alt=""><i class="fa fa-youtube">اليوتيوب</i></a></li>
+          <li><a target="_blank" href="#" id="facebook"><img src="images/f_b.png" alt=""><i class="fa fa-facebook">الفيسبوك</i></a></li>
+          <li><a target="_blank" href="#" id="twitter"><img src="images/twitter.png" alt=""><i class="fa fa-twitter">تويتر او x</i></a></li>
+        </ul>
+    </div>
+  </footer>
+  
+</div>
+
+<script>
+  function resizeIframe() {
+      var iframe = document.getElementById('dynamicIframe');
+      var divMain = document.getElementById('divMain');
+      divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
+      document.body.scrollTop = 0; //Browser
+      document.documentElement.scrollTop = 0; //Other Browser like Firefox
+  }
+
+  window.addEventListener('load', resizeIframe);
+  window.addEventListener('resize', resizeIframe);
+
+  // تغيير السنة تلقائيًا
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // تغيير الروابط الاجتماعية
+  document.getElementById('youtube').href = 'https://www.youtube.com/@HassounaAcademy';
+  document.getElementById('facebook').href = 'https://www.facebook.com/Hassouna.Academy';
+  document.getElementById('twitter').href = 'https://www.twitter.com/hassounaacademy';
+
+  loadIframe();
+</script>
+
+</body>
+</html>
