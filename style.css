@@ -307,6 +307,8 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     opacity: 1;
 }
 
+
+
 .my-p{
     width: 95%;
     text-align:justify;
@@ -318,6 +320,10 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     margin:20px;
     overflow:auto;
     display:block;
+}
+
+a .my-p{
+    width: 350px !important;
 }
 
 .my-reg{
@@ -559,6 +565,15 @@ footer {
         width: 80% !important;
         font-size: 13px;
         display: inline-block;
+    }
+
+    a .my-p{
+        width: 150px !important;
+    }
+
+    .my-p img{
+        width: 108px !important;
+        height: 60px !important;
     }
 
     #all-lang{
