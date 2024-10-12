@@ -3,47 +3,6 @@
     display: none;
 }
 
-@media (max-width: 700px) {
-    #txt1 {
-        display: none;
-    }
-    #txt2 {
-        display: inline;
-    }
-}
-
-@media (max-width: 530px) {
-    #txt1 {
-        display: none;
-    }
-    #txt2 {
-        display: none;
-    }
-    #img-logo {
-        display: none;
-    }
-    .navbar a {
-        font-size: 8px !important;
-    }
-    .btn {
-        font-size: 8px !important;
-    }
-    body {
-        font-size: 8px !important;
-    }
-    #drop-menu1{
-        right: -20px !important;
-    }
-    #drop-menu2{
-        right: 40px !important;
-    }
-
-    .dropdown:hover .dropdown-content, .dropdown-content:hover {
-        top: 39px !important;
-    }
-}
-
-
 *{
     transition: all 0.5s;
 }
@@ -302,7 +261,7 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
 
 .video-label{
     background-color: #414141;
-    width: 95%;
+    width: 95% !important;
     color:#FFF;
     margin:10px;
     margin-bottom:5px;
@@ -312,11 +271,7 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     font-weight:bold;
     border-radius:10px;
 }
-@media (max-width: 833px) {
-    .video-label{
-        width:320px;
-    }
-}
+
 
 .yt-video{
     margin:10px;
@@ -326,12 +281,7 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     border:2px solid #067292;
     border-radius: 20px;
 }
-@media (max-width: 833px) {
-    .yt-video{
-        width:320px;
-        height:200px;
-    }
-}
+
 
 .img-slide{
     display: block;
@@ -351,17 +301,14 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     opacity: 0.6;
     margin-bottom: 125px;
 }
-@media (max-width: 833px) {
-    .play-icon{
-        margin-bottom: 90px;
-    }
-}
+
 
 .play-icon:hover{
     opacity: 1;
 }
 
 .my-p{
+    width: 95%;
     text-align:justify;
     font-size:24px;
     color:#EEE;
@@ -379,25 +326,6 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
 
 .my-reg:hover{
     color:#AAA;
-}
-
-@media (max-width: 833px) {
-    .my-p{
-        font-size: 13px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 833px) {
-    #welcome_h_a{
-        font-size:18px;
-    }
-}
-
-@media (max-width: 833px) {
-    #ahmed{
-        margin-top: 5px;
-    }
 }
 
 .my-subject{
@@ -454,11 +382,7 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
     padding-left:10px;
     z-index:500;
 }
-@media (max-width: 833px) {
-    .fixed-top-label h3{
-        font-size:16px;
-    }
-}
+
 
 .input-group{
     margin-bottom:7px;
@@ -472,11 +396,7 @@ input[type=text]:focus , input[type=password]:focus , textarea:focus{
 #all-lang{
         font-size:15px;
 }
-@media (max-width: 833px) {
-    #all-lang{
-        font-size:8px;
-    }
-}
+
 
 /* #endregion My Custom Classes  */
 
@@ -554,8 +474,49 @@ footer {
     margin-bottom:2px;
 
 }
+
+@media (max-width: 700px) {
+    #txt1 {
+        display: none;
+    }
+    #txt2 {
+        display: inline;
+    }
+}
+
+@media (max-width: 530px) {
+    #txt1 {
+        display: none;
+    }
+    #txt2 {
+        display: none;
+    }
+    #img-logo {
+        display: none;
+    }
+    #drop-menu1{
+        right: -20px !important;
+    }
+    #drop-menu2{
+        right: 40px !important;
+    }
+
+    .dropdown:hover .dropdown-content, .dropdown-content:hover {
+        top: 39px !important;
+    }
+}
+
 @media (max-width: 833px) {
 
+    body {
+        font-size: 8px !important;
+    }
+    .navbar a {
+        font-size: 8px !important;
+    }
+    .btn {
+        font-size: 8px !important;
+    }
     .mybtn{
         font-size:10px;
         width: 125px;
@@ -575,6 +536,71 @@ footer {
     .mysmalllink{
         font-size:7px !important;
     }
+
+    #div1{
+        align-items: start !important;
+    }
+
+    #ahmed{
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .btn{
+        height: 15px !important;
+    }
+
+    .video-label{
+        width: 85% !important;
+    }
+
+    .my-p{
+        width: 80% !important;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    #all-lang{
+        font-size:8px;
+    }
+
+    .fixed-top-label h3{
+        font-size:16px;
+    }
+
+    #ahmed{
+        margin-top: 5px;
+    }
+
+    #welcome_h_a{
+        font-size:18px;
+    }
+
+    .play-icon{
+        margin-bottom: 90px;
+    }
+
+    .yt-video{
+        width:320px;
+        height:200px;
+    }
+
+    .mynum{
+        display: none;
+    }
+    #mysidemenu .btn{
+        width: 45px !important;
+        height: 10px !important;
+    }
+
+    .btn-copy{
+        height: 20px !important;
+    }
+
+    .footer-content .socials li a {
+        font-size: 10px !important;
+    }
+
 }
 
 .mynum{
