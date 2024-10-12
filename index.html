@@ -98,13 +98,12 @@
     
       divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
       
-      if (iframe.src === previousSrc){
+      if (iframe.src !== previousSrc){
         // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
         document.documentElement.scrollTop = scrollTop;
         document.body.scrollTop = scrollTop;
       }
-
-      if (iframe.src !== previousSrc) {
+      else{
         previousSrc = iframe.src;
         document.body.scrollTop = 0; //Browser
         document.documentElement.scrollTop = 0; //Other Browser like Firefox
