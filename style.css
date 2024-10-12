@@ -36,7 +36,6 @@ body {
     -webkit-tap-highlight-color: transparent !important; /* إزالة الهالة في Chrome على الهواتف */
     touch-action: manipulation; /* تحسين التعامل مع اللمس */
     -webkit-touch-callout: none; /* إلغاء القائمة السياقية على الهواتف */
-    pointer-events: none;
 }
 
 
