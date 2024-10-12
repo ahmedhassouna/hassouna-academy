@@ -77,6 +77,9 @@
           else if (page === 'myexpensesha1en') {iframe.src = "myexpensesha1en.html";} 
           // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
           //else {iframe.src = "home.html"; }
+          // إعادة تعيين موضع التمرير إلى الأعلى عند تغيير الصفحة
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
   }
 
   function resizeIframe() {
