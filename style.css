@@ -29,6 +29,10 @@ body {
     -moz-user-select: none; /* منع التحديد في Firefox */
     -ms-user-select: none; /* منع التحديد في Internet Explorer/Edge */
     user-select: none; /* منع التحديد في جميع المتصفحات */
+    -webkit-user-drag: none; /* منع السحب في Safari/Chrome */
+    -khtml-user-drag: none; /* منع السحب في Konqueror */
+    -moz-user-drag: none; /* منع السحب في Firefox */
+    -ms-user-drag: none; /* منع السحب في Internet Explorer/Edge */
 }
 
 #ahmed:active , #ahmed:focus{
