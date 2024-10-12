@@ -15,7 +15,7 @@
         <h2 id="welcome_h_a" dir="rtl" style="margin-top:0;margin-right:5px;text-align:right;color:#EEE;font-weight:bold;">
             <span style="margin-right:7px;">اهلاً بكم في حسونة اكاديمي 🎓</span>
             <div id="div1" class="my-p" style="display: flex; align-items:center;">
-                <img id="ahmed" src="images/ahmed.png" style="margin-left:20px;margin-top:-7;margin-right:10px;width:150px;height:150px;border:2px solid #067292;border-radius:75px;" />
+                <img id="ahmed" src="images/ha150.png" style="margin-left:20px;margin-top:-7;margin-right:10px;width:150px;height:150px;border:2px solid #067292;border-radius:75px;cursor: pointer;" onclick="toggleImage();" />
                 <div style="width:85%">
                     <p  style="font-weight:normal;">
                         اكاديمية حسونة تقدم لكم الدروس المجانية في عالم التكنولوجيا لتتابعوها من اي مكان و في اي وقت. ونسعد دائماً بتواجدكم معنا و انضمامكم الينا. نحن نحرص دائماً علي انك تتعلم ثم تفهم ثم بعد ذلك تقوم بالابداع. و هذا هو شعارنا             <span style="color:#FFF;">"افهم = تُبدع" .</span>
@@ -466,5 +466,16 @@
 
 <div class="new-line"></div>
 <br>
+<script>
+    function toggleImage() {
+        var img = document.getElementById("ahmed");
+        img.style.opacity = 0; // اخفاء الصورة لتطبيق الانتقال
+        setTimeout(function() {
+            img.src = img.src.endsWith("ahmed.png") ? "images/ha150.png" : "images/ahmed.png";
+            img.style.opacity = 1; // إظهار الصورة مجدداً بعد التبديل
+        }, 500); // مدة الانتقال مطابقة لمدة الـ CSS
+        
+    }
+</script>
 </body>
 </html>
