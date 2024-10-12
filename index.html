@@ -48,12 +48,14 @@
     <span id="txt2">HA</span>
   </a>
 </div>
+<script>
+  //var previousSrc = document.getElementById('dynamicIframe').src;
+  var previousSrc = null;
+</script>
 
 <div class="main" id="divMain" style="height: 100%;">
   <iframe id="dynamicIframe" onload="resizeIframe();" name="formain" src="home.html" frameborder="0"></iframe>
-  <script>
-    var previousSrc = document.getElementById('dynamicIframe').src;
-  </script>
+  
 
   <footer>
     <div class="footer-content">
@@ -83,11 +85,7 @@
           // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
           //else {iframe.src = "home.html"; }
           
-          if (iframe.src !== previousSrc) {
-            //previousSrc = iframe.src;
-            document.body.scrollTop = 0; //Browser
-            document.documentElement.scrollTop = 0; //Other Browser like Firefox
-          }
+          
           
   }
 
@@ -104,6 +102,12 @@
         // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
         document.documentElement.scrollTop = scrollTop;
         document.body.scrollTop = scrollTop;
+      }
+
+      if (iframe.src !== previousSrc) {
+        previousSrc = iframe.src;
+        document.body.scrollTop = 0; //Browser
+        document.documentElement.scrollTop = 0; //Other Browser like Firefox
       }
  
       
