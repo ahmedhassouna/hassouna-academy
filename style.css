@@ -21,6 +21,10 @@ body {
     overflow-y: scroll !important;
 }
 
+img {
+    transition: opacity 0.5s !important;
+}
+
 #img-logo{
     float: left !important;
     margin-top: 5px;
