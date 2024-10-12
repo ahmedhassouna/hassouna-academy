@@ -538,7 +538,7 @@ footer {
 /* إعدادات مخصصة للأجهزة المحمولة فقط */
 @media only screen and (max-width: 530px) and (hover: none) and (pointer: coarse) {
     .dropdown:hover .dropdown-content, .dropdown-content:hover {
-        top: 5.2vh; /* تعديل الموضع استنادًا لحجم الشاشة */
+        top: 5.2vh !important; /* تعديل الموضع استنادًا لحجم الشاشة */
     }
 }
 
