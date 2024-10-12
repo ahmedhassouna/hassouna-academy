@@ -80,6 +80,14 @@
           // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
           //else {iframe.src = "home.html"; }
           
+          if (iframe.src !== previousSrc) {
+            previousSrc = iframe.src;
+            // إعادة التمرير إلى الأعلى مباشرة بعد تغيير المصدر
+            setTimeout(() => {
+                document.body.scrollTop = 0; //Browser
+                document.documentElement.scrollTop = 0; //Other Browser like Firefox
+            }, 100);  // نستخدم تعيين زمني لضمان تغيير الـ src بالكامل قبل إعادة التمرير
+    }
           
   }
 
@@ -97,17 +105,7 @@
         document.documentElement.scrollTop = scrollTop;
         document.body.scrollTop = scrollTop;
       }
-      else{
-        document.body.scrollTop = 0; //Browser
-        document.documentElement.scrollTop = 0; //Other Browser like Firefox
-      }
-
-      if (iframe.src !== previousSrc) {
-        // إعادة التمرير إلى الأعلى فقط إذا تم تغيير المصدر
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        previousSrc = iframe.src;
-      }
+ 
       
   }
 
