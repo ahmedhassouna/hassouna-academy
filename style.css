@@ -23,6 +23,7 @@ body {
 
 img {
     transition: opacity 0.5s !important;
+    outline: none;
 }
 
 #img-logo{
