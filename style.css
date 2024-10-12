@@ -626,8 +626,13 @@ footer {
     .mynum{
         display: none;
     }
+
+    #mysidemenu{
+        top:40px !important;
+    }
+
     #mysidemenu .btn{
-        width: 45px !important;
+        width: 50px !important;
         height: 10px !important;
     }
 
