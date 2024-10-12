@@ -531,16 +531,11 @@ footer {
 
     .dropdown:hover .dropdown-content, .dropdown-content:hover {
         /* top: 41.8px !important; */
-        top: 4.7vh !important;
+        /* top: 4.7vh !important; */
+        top: 5.4vh !important;
     }
 }
 
-/* إعدادات مخصصة للأجهزة المحمولة */
-@media only screen and (max-width: 530px) and (max-height: 768px) and (hover: none) and (pointer: coarse) {
-    .dropdown:hover .dropdown-content, .dropdown-content:hover {
-        top: 5.4vh !important; /* الموضع للأجهزة المحمولة */
-    }
-}
 
 @media only screen and (max-width: 833px) {
 
