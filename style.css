@@ -130,7 +130,8 @@ body {
 
 .dropdown:hover .dropdown-content, .dropdown-content:hover {
     display: block;
-    top: 51px;
+    /* top: 51px; */
+    top:6.2vh;
     border-top:1px white solid;
 }
 
@@ -529,7 +530,8 @@ footer {
     }
 
     .dropdown:hover .dropdown-content, .dropdown-content:hover {
-        top: 41.8px !important;
+        /* top: 41.8px !important; */
+        top:4.7vh;
     }
 }
 
