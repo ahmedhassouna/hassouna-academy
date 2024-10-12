@@ -43,20 +43,12 @@
 
   <a target="formain" href="howtolearn.html">🧮 مسارات</a>
   <img id="img-logo" src="images/logo.png" alt="">
-  <a id="link-logo" href="https://www.youtube.com/user/HassounaAcademy" target="_blank">
-    <span id="txt1">Hassouna Academy</span>
-    <span id="txt2">HA</span>
-  </a>
+  <a id="link-logo" href="https://www.youtube.com/user/HassounaAcademy" target="_blank"><span id="txt1">Hassouna Academy</span><span id="txt2">HA</span></a>
 </div>
-<script>
-  //var previousSrc = document.getElementById('dynamicIframe').src;
-  var previousSrc = null;
-</script>
 
 <div class="main" id="divMain" style="height: 100%;">
   <iframe id="dynamicIframe" onload="resizeIframe();" name="formain" src="home.html" frameborder="0"></iframe>
   
-
   <footer>
     <div class="footer-content">
         <p>&copy; <span id="year">2024</span> حسونة أكاديمي. جميع الحقوق محفوظة.</p>
@@ -85,8 +77,6 @@
           // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
           //else {iframe.src = "home.html"; }
           
-          
-          
   }
 
   function resizeIframe() {
@@ -98,18 +88,11 @@
     
       divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
       
-      if (iframe.src !== previousSrc){
-        // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
-        document.documentElement.scrollTop = scrollTop;
-        document.body.scrollTop = scrollTop;
-      }
-      else{
-        previousSrc = iframe.src;
-        document.body.scrollTop = 0; //Browser
-        document.documentElement.scrollTop = 0; //Other Browser like Firefox
-      }
- 
-      
+
+      // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
+      document.documentElement.scrollTop = scrollTop;
+      document.body.scrollTop = scrollTop;
+
   }
 
   window.addEventListener('load', resizeIframe);
