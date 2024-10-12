@@ -76,6 +76,7 @@
           else if (page === 'myexpensesha1en') {iframe.src = "myexpensesha1en.html";} 
           // else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
           //else {iframe.src = "home.html"; }
+
           
   }
 
@@ -93,11 +94,15 @@
       document.documentElement.scrollTop = scrollTop;
       document.body.scrollTop = scrollTop;
 
+      document.body.scrollTop = 0; //Browser
+      document.documentElement.scrollTop = 0; //Other Browser like Firefox
+
   }
 
+  
+  //window.addEventListener('resize', resizeIframe);
   window.addEventListener('load', resizeIframe);
-  window.addEventListener('resize', resizeIframe);
-
+  
   // تغيير السنة تلقائيًا
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -106,7 +111,7 @@
   document.getElementById('facebook').href = 'https://www.facebook.com/Hassouna.Academy';
   document.getElementById('twitter').href = 'https://www.twitter.com/hassounaacademy';
 
-  loadIframe();
+  //loadIframe();
 </script>
 
 </body>
