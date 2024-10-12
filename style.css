@@ -475,7 +475,7 @@ footer {
 
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     #txt1 {
         display: none;
     }
@@ -484,7 +484,7 @@ footer {
     }
 }
 
-@media (max-width: 530px) {
+@media only screen and (max-width: 530px) {
     #txt1 {
         display: none;
     }
@@ -506,7 +506,7 @@ footer {
     }
 }
 
-@media (max-width: 833px) {
+@media only screen and (max-width: 833px) {
 
     body {
         font-size: 8px !important;
