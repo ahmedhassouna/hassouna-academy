@@ -23,7 +23,7 @@ body {
 
 #ahmed {
     transition: opacity 0.5s !important;
-    outline: none;
+    outline: none !important;
     will-change: border-radius, transform; /* لتحسين الأداء */
     -webkit-user-select: none; /* منع التحديد في Safari/Chrome */
     -moz-user-select: none; /* منع التحديد في Firefox */
@@ -37,6 +37,7 @@ body {
 
 #ahmed:active , #ahmed:focus{
     border-radius: 75px !important;
+    outline: none !important;
 }
 
 #img-logo{
