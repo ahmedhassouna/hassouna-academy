@@ -65,7 +65,7 @@
 <script>
   
 
-  function loadIframe() {
+  function loadPageToIframe() {
           const urlParams = new URLSearchParams(window.location.search);
           const page = urlParams.get('page');
           const iframe = document.getElementById("dynamicIframe");
@@ -84,15 +84,15 @@
       var iframe = document.getElementById('dynamicIframe');
       var divMain = document.getElementById('divMain');
 
-      // حفظ موضع التمرير الحالي
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      // حفظ موضع التمرير الحالي قبل تغيير divMain
+      //var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     
       divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
       
 
-      // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
-      document.documentElement.scrollTop = scrollTop;
-      document.body.scrollTop = scrollTop;
+      // إعادة تعيين موضع التمرير إلى الموضع المحفوظ بعد تغيير divMain
+      //document.documentElement.scrollTop = scrollTop;
+      //document.body.scrollTop = scrollTop;
 
       document.body.scrollTop = 0; //Browser
       document.documentElement.scrollTop = 0; //Other Browser like Firefox
@@ -111,7 +111,7 @@
   document.getElementById('facebook').href = 'https://www.facebook.com/Hassouna.Academy';
   document.getElementById('twitter').href = 'https://www.twitter.com/hassounaacademy';
 
-  //loadIframe();
+  loadPageToIframe();
 </script>
 
 </body>
