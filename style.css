@@ -535,6 +535,13 @@ footer {
     }
 }
 
+/* إعدادات مخصصة للأجهزة المحمولة فقط */
+@media only screen and (max-width: 530px) and (hover: none) and (pointer: coarse) {
+    .dropdown:hover .dropdown-content, .dropdown-content:hover {
+        top: 4.9vh; /* تعديل الموضع استنادًا لحجم الشاشة */
+    }
+}
+
 @media only screen and (max-width: 833px) {
 
     body {
