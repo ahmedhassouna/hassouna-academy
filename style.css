@@ -21,7 +21,7 @@ body {
     overflow-y: scroll !important;
 }
 
-#ahmed {
+#ahmed , #ahmed:active , #ahmed:focus{
     transition: opacity 0.5s !important;
     outline: none !important;
     will-change: border-radius, transform; /* لتحسين الأداء */
@@ -33,12 +33,12 @@ body {
     -khtml-user-drag: none; /* منع السحب في Konqueror */
     -moz-user-drag: none; /* منع السحب في Firefox */
     -ms-user-drag: none; /* منع السحب في Internet Explorer/Edge */
+    -webkit-tap-highlight-color: transparent !important; /* إزالة الهالة في Chrome على الهواتف */
+    touch-action: manipulation; /* تحسين التعامل مع اللمس */
+    -webkit-touch-callout: none; /* إلغاء القائمة السياقية على الهواتف */
+    pointer-events: none;
 }
 
-#ahmed:active , #ahmed:focus{
-    border-radius: 75px !important;
-    outline: none !important;
-}
 
 #img-logo{
     float: left !important;
