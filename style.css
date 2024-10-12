@@ -25,6 +25,10 @@ body {
     transition: opacity 0.5s !important;
     outline: none;
     will-change: border-radius, transform; /* لتحسين الأداء */
+    -webkit-user-select: none; /* منع التحديد في Safari/Chrome */
+    -moz-user-select: none; /* منع التحديد في Firefox */
+    -ms-user-select: none; /* منع التحديد في Internet Explorer/Edge */
+    user-select: none; /* منع التحديد في جميع المتصفحات */
 }
 
 #ahmed:active , #ahmed:focus{
