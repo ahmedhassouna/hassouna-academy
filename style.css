@@ -485,6 +485,9 @@ footer {
 }
 
 @media only screen and (max-width: 530px) {
+    .navbar a {
+        font-size: 8px !important;
+    }
     #txt1 {
         display: none;
     }
@@ -511,9 +514,7 @@ footer {
     body {
         font-size: 8px !important;
     }
-    .navbar a {
-        font-size: 8px !important;
-    }
+    
     .btn {
         font-size: 8px !important;
     }
@@ -684,4 +685,3 @@ footer {
 .lastsubject{
     height:200px;
 }
-
