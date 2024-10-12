@@ -24,10 +24,11 @@ body {
 #ahmed {
     transition: opacity 0.5s !important;
     outline: none;
+    will-change: border-radius, transform; /* لتحسين الأداء */
 }
 
-#ahmed:active {
-    border-radius: 75px;
+#ahmed:active , #ahmed:focus{
+    border-radius: 75px !important;
 }
 
 #img-logo{
