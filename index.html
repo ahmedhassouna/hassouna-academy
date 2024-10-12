@@ -96,12 +96,15 @@
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     
       divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
-      document.body.scrollTop = 0; //Browser
-      document.documentElement.scrollTop = 0; //Other Browser like Firefox
+      
       if (iframe.src === previousSrc){
         // إعادة تعيين موضع التمرير إلى الموضع المحفوظ
         document.documentElement.scrollTop = scrollTop;
         document.body.scrollTop = scrollTop;
+      }
+      else{
+        document.body.scrollTop = 0; //Browser
+        document.documentElement.scrollTop = 0; //Other Browser like Firefox
       }
       
   }
