@@ -15,7 +15,7 @@
 
   <div class="dropdown">
     <a id="main-drop-menu1" class="dropdown-menu" href="#">🎗️ انضمام</a>
-    <div id="drop-menu1" class="dropdown-content" style="display: none; top:0; border: 1px solid #fff;">
+    <div id="drop-menu1" class="dropdown-content fadeOut fadeIn" style="display: none; top:0; border: 1px solid #fff;opacity:0;">
         <a target="_blank" href="https://www.youtube.com/channel/UC5PbBz_roYczmUR6gg_OAxw/join">انضمام الي القناة</a>
         <a target="formain" href="ahmedwords.html">كلمة احمد حسونة</a>
         <a target="formain" href="links.html">روابط الاكاديمية</a>
@@ -27,7 +27,7 @@
 
   <div class="dropdown">
     <a id="main-drop-menu2" class="dropdown-menu" href="#">🎓 كورسات</a>
-    <div id="drop-menu2" class="dropdown-content" style="display: none; top:0; border: 1px solid #fff;">
+    <div id="drop-menu2" class="dropdown-content fadeOut fadeIn" style="display: none; top:0; border: 1px solid #fff;opacity:0;">
         <a target="formain" href="all.html">جميع الكورسات مرتبة</a>
         <a target="formain" href="plcourses.html">كورسات لغات البرمجة</a>
         <a target="formain" href="mobilecourses.html">كورسات تطبيقات الهاتف</a>
@@ -67,28 +67,18 @@
   var mnav = document.getElementById('mainnav');
   var m1 = document.getElementById('drop-menu1');
   var m2 = document.getElementById('drop-menu2');
-
-  function hideMenu1(){m1.style.top = '0'; m1.style.display = 'none';}
-  function hideMenu2(){m2.style.top = '0'; m2.style.display = 'none';}
-  function showMenu1(){m1.style.display = 'block'; m1.style.top = (mnav.offsetHeight-1) + 'px';}
-  function showMenu2(){m2.style.display = 'block'; m2.style.top = (mnav.offsetHeight-1) + 'px';}
-
+  function hideMenu1(){m1.style.opacity='0'; m1.style.top='0'; setTimeout(function() {m1.style.display='none';}, 500);}
+  function hideMenu2(){m2.style.opacity='0'; m2.style.top='0';setTimeout(function() {m2.style.display='none';}, 500);}
+  function showMenu1(){m1.style.display='block'; m1.style.top = (mnav.offsetHeight-1) + 'px'; m1.style.opacity='1';}
+  function showMenu2(){m2.style.display='block'; m2.style.top = (mnav.offsetHeight-1) + 'px'; m2.style.opacity='1';}
   document.getElementById('main-drop-menu1').onclick = function(event) {
       event.stopPropagation(); // منع تمرير الحدث للـ body
-      if(m1.style.display=='none'){
-        hideMenu2(); 
-        showMenu1();
-      }
-      else{hideMenu1();}
+      if(m1.style.display=='none'){hideMenu2(); showMenu1();}else{hideMenu1();}
   };
 
   document.getElementById('main-drop-menu2').onclick = function(event) {
       event.stopPropagation(); // منع تمرير الحدث للـ body
-      if(m2.style.display=='none'){
-        hideMenu1(); 
-        showMenu2();
-      }
-      else{hideMenu2();}
+      if(m2.style.display=='none'){hideMenu1(); showMenu2();}else{hideMenu2();}
   };
 
   document.body.onclick = function(event) {
@@ -128,10 +118,7 @@
     document.documentElement.scrollTop = 0; //Other Browser like Firefox
 
     /* لاخفاء القوائم عند الضغط عليه */
-    iframe.contentWindow.document.body.onclick = function(event) {
-      hideMenu1();
-      hideMenu2();
-    };
+    iframe.contentWindow.document.body.onclick = function(event) {hideMenu1();hideMenu2();};
   }
 
   
