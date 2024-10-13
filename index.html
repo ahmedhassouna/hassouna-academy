@@ -10,12 +10,12 @@
 </head>
 <body>
 
-<div class="navbar">
+<div id="mainnav" class="navbar">
   <a target="formain" href="home.html">🏠 الرئيسية</a>
 
   <div class="dropdown">
-    <a class="dropdown-menu" href="#">🎗️ انضمام</a>
-    <div id="drop-menu1" class="dropdown-content">
+    <a id="main-drop-menu1" class="dropdown-menu" href="#">🎗️ انضمام</a>
+    <div id="drop-menu1" class="dropdown-content" style="display: none; top:0; border: 1px solid #fff;">
         <a target="_blank" href="https://www.youtube.com/channel/UC5PbBz_roYczmUR6gg_OAxw/join">انضمام الي القناة</a>
         <a target="formain" href="ahmedwords.html">كلمة احمد حسونة</a>
         <a target="formain" href="links.html">روابط الاكاديمية</a>
@@ -26,8 +26,8 @@
   </div>
 
   <div class="dropdown">
-    <a class="dropdown-menu" href="#">🎓 كورسات</a>
-    <div id="drop-menu2" class="dropdown-content">
+    <a id="main-drop-menu2" class="dropdown-menu" href="#">🎓 كورسات</a>
+    <div id="drop-menu2" class="dropdown-content" style="display: none; top:0; border: 1px solid #fff;">
         <a target="formain" href="all.html">جميع الكورسات مرتبة</a>
         <a target="formain" href="plcourses.html">كورسات لغات البرمجة</a>
         <a target="formain" href="mobilecourses.html">كورسات تطبيقات الهاتف</a>
@@ -63,39 +63,75 @@
 </div>
 
 <script>
-  
+
+  var mnav = document.getElementById('mainnav');
+  var m1 = document.getElementById('drop-menu1');
+  var m2 = document.getElementById('drop-menu2');
+
+  function hideMenu1(){m1.style.top = '0'; m1.style.display = 'none';}
+  function hideMenu2(){m2.style.top = '0'; m2.style.display = 'none';}
+  function showMenu1(){m1.style.display = 'block'; m1.style.top = (mnav.offsetHeight-1) + 'px';}
+  function showMenu2(){m2.style.display = 'block'; m2.style.top = (mnav.offsetHeight-1) + 'px';}
+
+  document.getElementById('main-drop-menu1').onclick = function(event) {
+      event.stopPropagation(); // منع تمرير الحدث للـ body
+      if(m1.style.display=='none'){
+        hideMenu2(); 
+        showMenu1();
+      }
+      else{hideMenu1();}
+  };
+
+  document.getElementById('main-drop-menu2').onclick = function(event) {
+      event.stopPropagation(); // منع تمرير الحدث للـ body
+      if(m2.style.display=='none'){
+        hideMenu1(); 
+        showMenu2();
+      }
+      else{hideMenu2();}
+  };
+
+  document.body.onclick = function(event) {
+      hideMenu1();
+      hideMenu2();
+  };
 
   function loadPageToIframe() {
-          const urlParams = new URLSearchParams(window.location.search);
-          const page = urlParams.get('page');
-          const iframe = document.getElementById("dynamicIframe");
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+    const iframe = document.getElementById("dynamicIframe");
 
-          if (page === 'mynotesha1') {iframe.src = "mynotesha1.html";} 
-          else if (page === 'mynotesha1en') {iframe.src = "mynotesha1en.html";} 
-          else if (page === 'myexpensesha1') {iframe.src = "myexpensesha1.html";} 
-          else if (page === 'myexpensesha1en') {iframe.src = "myexpensesha1en.html";} 
-          else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
-          //else {iframe.src = "home.html"; }
+    if (page === 'mynotesha1') {iframe.src = "mynotesha1.html";} 
+    else if (page === 'mynotesha1en') {iframe.src = "mynotesha1en.html";} 
+    else if (page === 'myexpensesha1') {iframe.src = "myexpensesha1.html";} 
+    else if (page === 'myexpensesha1en') {iframe.src = "myexpensesha1en.html";} 
+    else if (page === 'howtolearn') {iframe.src = "howtolearn.html";} 
+    //else {iframe.src = "home.html"; }
 
   }
 
   function resizeIframe() {
-      var iframe = document.getElementById('dynamicIframe');
-      var divMain = document.getElementById('divMain');
+    var iframe = document.getElementById('dynamicIframe');
+    var divMain = document.getElementById('divMain');
 
-      // حفظ موضع التمرير الحالي قبل تغيير divMain
-      //var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // حفظ موضع التمرير الحالي قبل تغيير divMain
+    //var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  
+    divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
     
-      divMain.style.height = (iframe.contentWindow.document.body.scrollHeight+520) + 'px';
-      
 
-      // إعادة تعيين موضع التمرير إلى الموضع المحفوظ بعد تغيير divMain
-      //document.documentElement.scrollTop = scrollTop;
-      //document.body.scrollTop = scrollTop;
+    // إعادة تعيين موضع التمرير إلى الموضع المحفوظ بعد تغيير divMain
+    //document.documentElement.scrollTop = scrollTop;
+    //document.body.scrollTop = scrollTop;
 
-      document.body.scrollTop = 0; //Browser
-      document.documentElement.scrollTop = 0; //Other Browser like Firefox
+    document.body.scrollTop = 0; //Browser
+    document.documentElement.scrollTop = 0; //Other Browser like Firefox
 
+    /* لاخفاء القوائم عند الضغط عليه */
+    iframe.contentWindow.document.body.onclick = function(event) {
+      hideMenu1();
+      hideMenu2();
+    };
   }
 
   
