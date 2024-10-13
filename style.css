@@ -112,11 +112,11 @@ body {
 }
 
 #drop-menu1{
-    right: 60px;
+    right: 52px;
 }
 
 #drop-menu2{
-    right: 90px;
+    right: 98px;
 }
 
 .dropdown-content a {
@@ -525,12 +525,12 @@ footer {
         display: none;
     }
     #drop-menu1{
-        right: 30px !important; 
+        right: 33px !important; 
         overflow: hidden !important;
         width: 95px !important;
     }
     #drop-menu2{
-        right: 81px !important;
+        right: 77px !important;
     }
 
 /*
